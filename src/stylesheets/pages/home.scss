@@ -1,0 +1,64 @@
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 20px 16px;
+  background-color: $grey;
+  font-size: 20px;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / -25%);
+
+  .fa-location-dot {
+    margin-right: 16px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.exploration {
+  padding: 40px 24px 70px 24px;
+  text-align: center;
+  background-color: $light-grey;
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 30px;
+    font-weight: lighter;
+  }
+
+  a {
+    border: 0;
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 100px;
+    color: white;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    transition-duration: 0.25s;
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 25%);
+    text-decoration: none;
+  }
+}
+
+.operation {
+  padding: 32px 16px;
+
+  h2 {
+    margin: 0;
+  }
+
+  .operation-step {
+    display: flex;
+
+    h3 {
+      margin: 0;
+      background-color: $purple;
+      border-radius: 50%; 
+    }
+  }
+
+}

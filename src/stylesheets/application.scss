@@ -1,3 +1,9 @@
-h1 {
-  color: blue
-}
+@import "./utils/variables";
+
+@import "./layout/navbar";
+
+@import "./base/fonts";
+
+@import "./vendors/normalize";
+
+@import "./pages/home";
