@@ -45,20 +45,126 @@
 }
 
 .operation {
-  padding: 32px 16px;
+  padding: 32px 16px 24px 16px;
 
   h2 {
     margin: 0;
   }
 
-  .operation-step {
-    display: flex;
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
 
-    h3 {
-      margin: 0;
-      background-color: $purple;
-      border-radius: 50%; 
+    li {
+      position: relative;
+      padding: 20px 13px 0 13px;
+      margin: 20px 10px;
+      height: 40px;
+      background-color: whitesmoke;
+      border-radius: 15px;
+      box-shadow: 0px 5px 10px 0px gainsboro;
+
+
+      .step {
+        position: absolute;
+        left: -10px;
+        padding-top: 5px;
+        width: 23px;
+        height: 20px;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #fff;
+        background-color: #9356DC;
+      }
+
+      .icon {
+        margin: 0 25px;
+        font-size: 20px;
+        color: #646464;
+      }
+    }
+
+    li:hover {
+      background-color: rgba(147, 86, 220, 0.1);
+
+      .icon {
+        color: $purple;
+      }
     }
   }
+}
 
+.restaurants {
+  background-color: $grey;
+  padding: 32px 16px 24px 16px;
+
+  .menu {
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 5px 10px 0px gainsboro;
+    box-shadow: 0px 5px 10px 0px gainsboro;
+    background-color: #fff;
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      
+      img {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+      }
+
+      .promo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        padding: 5px;
+        color: #0c6b50;
+        background: #99E2D0;
+        border-radius: 3px;
+        text-align: center;
+      }
+
+      .menu-info {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 15px 0;
+        background-color: #fff;
+        border-radius: 20px 20px 0 0;
+      }
+    }
+
+
+    label {
+      position: absolute;
+      right: 20px;
+      bottom: 35px;
+      height: 25px;
+      font-size: 25px;
+      cursor: pointer;
+
+      .checkbox-like {
+        input[type="checkbox"], 
+        .checkbox-like .checked {
+          display: none;
+        }
+        
+        input[type="checkbox"]:checked ~ 
+        .checked {
+         display: inline-block;
+        }
+  
+        input[type="checkbox"]:checked ~ 
+        .unchecked {
+          display: none;
+        }
+      }
+    }
+  }
 }
