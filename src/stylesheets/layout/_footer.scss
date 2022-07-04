@@ -1,0 +1,27 @@
+footer {
+  background-color: $dark-grey;
+  padding: 18px 0px 18px 24px;
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer-title {
+    font-size: 20px;
+    font-family: "shrikhand";
+  }
+  
+  .footer-content {
+    margin-top: 15px;
+  }
+
+  .footer-content-subtitle {
+    margin-bottom: 8px;
+  }
+
+  .fas {
+    width: 24px;
+  }
+}

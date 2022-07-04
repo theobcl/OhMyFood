@@ -1,0 +1,87 @@
+.background-image {
+  width: 100%;
+}
+
+.menu {
+  background-color: $light-grey;
+  padding: 15px 20px;
+  margin-top: -50px;
+  position: relative;
+  border-radius: 32px 32px 0 0;
+
+  .menu-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-family: "Shrikhand";
+    }
+
+    .fa-heart {
+      font-size: 28px;
+    }
+
+    .checkbox-like input[type="checkbox"], 
+    .checkbox-like .checked {
+      display: none;
+    }
+ 
+    .checkbox-like input[type="checkbox"]:checked ~ 
+    .checked {
+      display: inline-block;
+    }
+ 
+    .checkbox-like input[type="checkbox"]:checked ~ 
+    .unchecked {
+      display: none;
+    }
+  }
+
+  .menu-content {
+
+    .menu-content-part {
+      h3 {
+        position: relative;
+        font-weight: 300;
+        padding-bottom: 10px;
+      }
+
+      h3:after {
+        content: "";
+        width: 48px;
+        height: 4px;
+        background-color: #99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 16px;
+        border-radius: 20px;
+        box-shadow: 0px 5px 10px 0px gainsboro;
+
+        .item-title h4 {
+          margin: 0;
+        }
+
+        .item-description p {
+          margin: 0;
+        }
+
+        .item-description p {
+          margin: 0;
+        }
+
+        .item-price {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+  
+}

@@ -38,10 +38,15 @@
     color: white;
     background-color: #686868;
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-    transition-duration: 0.25s;
     box-shadow: 4px 4px 10px rgb(0 0 0 / 25%);
     text-decoration: none;
+
   }
+
+  a:hover {
+    padding: 14px 26px;
+  }
+
 }
 
 .operation {
@@ -83,16 +88,15 @@
         font-size: 20px;
         color: #646464;
       }
-
-      &--:hover {
-        background-color: rgba(147, 86, 220, 0.1);
-  
-        .icon {
-          color: $purple;
-        }
-      }
     }
 
+    li:hover {
+      background-color: rgba(147, 86, 220, 0.1);
+
+      .icon {
+        color: $purple;
+      }
+    }
 
   }
 
@@ -102,13 +106,12 @@
   background-color: $grey;
   padding: 32px 16px 24px 16px;
 
-  .menu {
+  .restaurant-card {
     position: relative;
     margin-bottom: 15px;
     border-radius: 20px;
-    -webkit-box-shadow: 0px 5px 10px 0px gainsboro;
     box-shadow: 0px 5px 10px 0px gainsboro;
-    background-color: #fff;
+    background-color: white;
 
     a {
       color: #000;
@@ -137,16 +140,18 @@
       .menu-info {
         display: flex;
         flex-direction: column;
-        margin: 10px 15px 0;
+        margin: 10px 15px;
+        padding-bottom: 10px;
         background-color: #fff;
         border-radius: 20px 20px 0 0;
       }
     }
 
-    .checkbox-like {
+    .fa-heart {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      right: 30px;
+      bottom: 20px;
+      font-size: 24px;
     }
 
     .checkbox-like input[type="checkbox"], 
