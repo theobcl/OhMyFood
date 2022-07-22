@@ -1,68 +1,131 @@
+// @keyframes animation-choix{
+//   0%{
+//       transform: translateY(40px);
+//       opacity: 0;
+//   }
+//   100%{
+//       transform: translateY(0);
+//       opacity: 1;
+//   }
+// }
+
+// @keyframes check-rotation{
+//   0%{
+//       transform: rotate(0deg);
+//   }
+//   100%{
+//       transform: rotate(360deg);
+//   }
+// }
+
 .background-image {
   width: 100%;
 }
 
-.menu {
+.container {
   background-color: $light-grey;
   padding: 15px 20px;
   margin-top: -50px;
   position: relative;
   border-radius: 32px 32px 0 0;
+}
 
-  .menu-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.restaurant {
+  &-title {
+    font-family: "Shrikhand";
+  }
 
-    h1 {
-      font-family: "Shrikhand";
+  &-heart {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+
+    .fa-regular {
+      font-size: 25px;
+      margin-right: 25px;
+    }
+
+    .fa-solid {
+      font-size: 25px;
+      margin-right: 25px;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .fa-solid:hover {
+      animation: heart 500ms ease-in forwards;
     }
   }
 
-  .menu-content {
+}
 
-    .menu-content-part {
-      h3 {
-        position: relative;
-        font-weight: 300;
-        padding-bottom: 10px;
+.menu {
+  &-step {
+    &-name {
+      position: relative;
+      font-weight: 300;
+      padding-bottom: 10px;
+    }
+
+    &-name:after {
+      content: "";
+      width: 48px;
+      height: 4px;
+      background-color: #99e2d0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    &-item {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      padding: 16px;
+      border-radius: 20px;
+      box-shadow: 0px 5px 10px 0px gainsboro;
+      cursor: pointer;
+
+      &-info h4, p {
+        margin: 0;
       }
 
-      h3:after {
-        content: "";
-        width: 48px;
-        height: 4px;
-        background-color: #99e2d0;
-        position: absolute;
-        left: 0;
-        bottom: 0;
+      &-price {
+        align-self: flex-end;
       }
 
-      .item {
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        padding: 16px;
-        border-radius: 20px;
-        box-shadow: 0px 5px 10px 0px gainsboro;
+    //   &-check{
+    //     position: absolute;
+    //     right: 0px;
+    //     width: 70px;
+    //     height: 70px;
+    //     background-color: #99E2D0;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     transform: translateX(100%);
+    //     transition: 300ms ease-in;
 
-        .item-title h4 {
-          margin: 0;
-        }
+    //     i{
+    //           font-size: 30px;
+    //           color: white;
+    //     }
+    //   }
+    // }
 
-        .item-description p {
-          margin: 0;
-        }
+    // &-item:hover .menu-step-item-check {
+    //   transform: translateX(0%);
+    //   transition: 1000ms ease-in;
 
-        .item-description p {
-          margin: 0;
-        }
+    //   i {
+    //     animation: check-rotation 2000ms 100ms both;
+    //   }
+    // }
 
-        .item-price {
-          align-items: flex-end;
-        }
-      }
+    // .card:hover .ligne2{
+    //     padding-right: 85px;
+    // }
     }
   }
-  
 }

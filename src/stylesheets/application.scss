@@ -9,3 +9,22 @@
 
 @import "./pages/home";
 @import "./pages/restaurant";
+
+
+@keyframes heart {
+  0%{
+    background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+  }
+
+  100%{
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 1;
+  }
+}

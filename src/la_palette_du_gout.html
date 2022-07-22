@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+  <!---- HEAD ---->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +9,57 @@
     <script src="https://kit.fontawesome.com/baa55e355e.js" crossorigin="anonymous"></script>
     <title>Of My Food</title>
   </head>
+
+  <!---- BODY ---->
   <body>
+
+    <!-- Nav Bar -->
     <nav>
       <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
       <img src="public/images/logo/ohmyfood@2x.svg" alt="logo">
     </nav>
-    <img class="background-image" src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo plat restaurant">
-    <main class="menu">
-      <div class="menu-title">
-        <h1>La palette du goût</h1>
-        <label class="checkbox-like">
-          <input type="checkbox">
-          <span class="far fa-heart unchecked" aria-hidden="true"></span>
-          <span class="fas fa-heart checked" aria-hidden="true"></span>
-        </label>  
-      </div>
-      <div class="menu-content">
-        <div class="menu-content-part">
-          <h3>ENTRÉES</h3>
-          <div class="item">
-            <div class="item-info">
-              <div class="item-title">
-                <h4>Fricassée d'escargot</h4>
-              </div>
-              <div class="item-description">
-               <p>Au piment d'espelette</p>
-              </div>
+
+    <!-- Background Image -->
+    <section>
+      <img class="background-image" src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo plat restaurant">
+    </section>
+
+    <!-- Container -->
+    <main class="container">
+
+      <!-- Restaurant Title -->
+      <section class="restaurant">
+        <h1 class="restaurant-title">La palette du goût</h1>
+        <div class="restaurant-heart">
+          <i class="fa-solid fa-heart coeur-vide"></i>
+          <i class="fa-regular fa-heart coeur-plein"></i>
+        </div>
+      </section>
+
+      <!-- Menu -->
+      <section class="menu">
+
+        <!-- Starter -->
+        <div class="menu-step">
+          <h3 class="menu-step-name">ENTRÉES</h3>
+          <div class="menu-step-item choice-1">
+            <div class="menu-step-item-info">
+              <h4>Fricassée d'escargot</h4>
+              <p>Au piment d'espelette</p>
             </div>
-            <div class="item-price">
+            <div class="menu-step-item-price">
               <strong>25€</strong>
             </div>
+            <!-- <div class="menu-step-item-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div> -->
           </div>
         </div>
-      </div>
+
+      </section>
     </main>
+
+    <!-- Footer -->
     <footer>
       <a class="footer-title" href="index.html">ohmyfood</a>
       <div class="footer-content">
@@ -61,7 +80,9 @@
         <div class="footer-content-subtitle">
             <a class="footer-content" href="mailto:email@example.com">Contact</a>
         </div>
-    </div>
+      </div>
     </footer>
+
   </body>
+
 </html>
