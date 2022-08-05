@@ -63,7 +63,9 @@
   }
 
   a:hover {
-    padding: 14px 26px;
+    background-image: linear-gradient(0deg,rgba(169, 105, 247, 0.9),rgba(255, 156, 227, 0.9));
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 50%);
+
   }
 
 }
@@ -112,7 +114,7 @@
     &-item:hover {
       background-color: rgba(147, 86, 220, 0.1);
 
-      &-icon {
+      .operation-list-item-icon {
         color: $purple;
       }
     }
