@@ -1,30 +1,25 @@
-// @keyframes animation-choix{
-//   0%{
-//       transform: translateY(40px);
-//       opacity: 0;
-//   }
-//   100%{
-//       transform: translateY(0);
-//       opacity: 1;
-//   }
-// }
+@keyframes scrollDisplay {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-// @keyframes check-rotation{
-//   0%{
-//       transform: rotate(0deg);
-//   }
-//   100%{
-//       transform: rotate(360deg);
-//   }
-// }
+@keyframes checkedRotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .background-image {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .container {
   background-color: $light-grey;
-  padding: 15px 20px;
+  padding: 15px 20px 0 20px;
   margin-top: -50px;
   position: relative;
   border-radius: 32px 32px 0 0;
@@ -33,6 +28,7 @@
 .restaurant {
   &-title {
     font-family: "Shrikhand";
+    margin-bottom: 40px;
   }
 
   &-heart {
@@ -61,6 +57,8 @@
 
 .menu {
   &-step {
+    margin-bottom: 40px;
+
     &-name {
       position: relative;
       font-weight: 300;
@@ -71,61 +69,126 @@
       content: "";
       width: 48px;
       height: 4px;
-      background-color: #99e2d0;
+      background-color: $blue;
       position: absolute;
       left: 0;
       bottom: 0;
     }
 
     &-item {
-      position: relative;
       display: flex;
+      margin-bottom: 14px;
       justify-content: space-between;
       background-color: white;
-      padding: 16px;
       border-radius: 20px;
       box-shadow: 0px 5px 10px 0px gainsboro;
+      overflow: hidden;
       cursor: pointer;
+      transform: translateY(18px);
+      opacity: 0;
 
-      &-info h4, p {
-        margin: 0;
+      &:nth-child(2) {
+        animation: scrollDisplay 0.7s 0.2s ease-out;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(3) {
+        animation: scrollDisplay 0.7s 0.4s ease-out;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(4) {
+        animation: scrollDisplay 0.7s 0.6s ease-out;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(5) {
+        animation: scrollDisplay 0.7s 0.8s ease-out;
+        animation-fill-mode: forwards;
+      }
+
+      &-info {
+        width: 100%;
+        margin: 10px 12px;
+        overflow: hidden;
+
+        h4 {
+          font-size: 18px;
+          margin: 0 0 4px 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        p {
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: rgba(0, 0, 0, 0.596);
+        }
       }
 
       &-price {
         align-self: flex-end;
+        justify-self: flex-end;
+        margin: 10px 12px;
       }
 
-    //   &-check{
-    //     position: absolute;
-    //     right: 0px;
-    //     width: 70px;
-    //     height: 70px;
-    //     background-color: #99E2D0;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     transform: translateX(100%);
-    //     transition: 300ms ease-in;
+      &-choose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 0px;
+        background-color: $blue;
+        border-radius: 0 14px 14px 0;
+        transition: width 0.8s ease;
 
-    //     i{
-    //           font-size: 30px;
-    //           color: white;
-    //     }
-    //   }
-    // }
+        .menu-step-item-choose-checked {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: white;
+          color: $blue;
+        }
+      }
+    }
 
-    // &-item:hover .menu-step-item-check {
-    //   transform: translateX(0%);
-    //   transition: 1000ms ease-in;
+    &-item:hover > .menu-step-item-choose {
+      width: 100px;
 
-    //   i {
-    //     animation: check-rotation 2000ms 100ms both;
-    //   }
-    // }
-
-    // .card:hover .ligne2{
-    //     padding-right: 85px;
-    // }
+      .menu-step-item-choose-checked {
+        animation: checkedRotation 0.7s ease-out;
+        animation-fill-mode: forwards;
+      }
     }
   }
+
+  &-cta {
+    text-align: center;
+    margin: 50px 0;
+
+    a {
+      cursor: pointer;
+      border: 0;
+      padding: 12px 24px;
+      font-weight: 500;
+      font-size: 16px;
+      border-radius: 100px;
+      color: white;
+      background-color: #686868;
+      background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 25%);
+      text-decoration: none;
+    }
+  }
+
+  &-cta:hover a {
+    padding: 14px 26px;
+  }
 }
+
