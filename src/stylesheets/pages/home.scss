@@ -166,7 +166,7 @@
         }
 
         .fa-solid:hover {
-          animation: heart 500ms ease-in forwards;
+          animation: heartAnimation 500ms ease-in forwards;
         }
       }
     }
@@ -183,7 +183,7 @@
   opacity: 0.7;
   z-index: 10;
   background-color: $blue;
-  animation: hideAnimation 0.4s ease-in 3s;
+  animation: hideSpinnerAnimation 0.4s ease-in 3s;
   animation-fill-mode: forwards;
 
   &-container {

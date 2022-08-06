@@ -1,18 +1,25 @@
 @import "./utils/variables";
 
-@import "./layout/navbar";
-@import "./layout/footer";
-
 @import "./base/fonts";
 
-@import "./vendors/normalize";
+@import "./layout/navbar";
+@import "./layout/footer";
 
 @import "./pages/home";
 @import "./pages/restaurant";
 
+@import "./responsive/home";
+@import "./responsive/restaurant";
+
+
+@import "./vendors/normalize";
+
+
+
+
 
 // Heart animation
-@keyframes heart {
+@keyframes heartAnimation {
   0%{
     background: linear-gradient(#9356DC, #FF79DA);
     background-clip: text;
@@ -54,7 +61,7 @@
   }
 }
 
-@keyframes hideAnimation {
+@keyframes hideSpinnerAnimation {
   0% {
     z-index: 10;
     opacity: 0.8;
@@ -72,14 +79,14 @@
 }
 
 // Restaurant page anaiamtions
-@keyframes scrollDisplay {
+@keyframes itemAppearanceAnimation {
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes checkedRotation {
+@keyframes itemCheckedAnimation {
   to {
     transform: rotate(360deg);
   }

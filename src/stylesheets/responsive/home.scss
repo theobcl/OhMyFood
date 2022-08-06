@@ -1,0 +1,29 @@
+@media screen and (min-width: 800px) and (min-width: 1200px) {
+
+  .operation-list {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+      width: 300px;
+    }
+  }
+
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    row-gap: 16px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 32px;
+  }
+
+}
