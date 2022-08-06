@@ -11,6 +11,7 @@
 @import "./pages/restaurant";
 
 
+// Heart animation
 @keyframes heart {
   0%{
     background: linear-gradient(#9356DC, #FF79DA);
@@ -26,5 +27,60 @@
     -webkit-background-clip: text;
     color: transparent;
     opacity: 1;
+  }
+}
+
+// Homepage animation
+@keyframes spinnerAnimation {
+  0% {
+    width: 0px;
+    height: 0px;
+    transform: rotate(360deg)
+  }
+
+  1% {
+    width: 80px;
+    height: 80px;
+  }
+
+  99% {
+    width: 80px;
+    height: 80px;
+  }
+
+  100% {
+    width: 0vh;
+    height: 0vh;
+  }
+}
+
+@keyframes hideAnimation {
+  0% {
+    z-index: 10;
+    opacity: 0.8;
+  }
+
+  90% {
+    z-index: 10;
+    opacity: 0.8;
+  }
+
+  100% {
+    z-index: -10;
+    opacity: 0;
+  }
+}
+
+// Restaurant page anaiamtions
+@keyframes scrollDisplay {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes checkedRotation {
+  to {
+    transform: rotate(360deg);
   }
 }
